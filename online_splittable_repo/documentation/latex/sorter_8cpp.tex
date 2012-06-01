@@ -1,0 +1,75 @@
+\hypertarget{sorter_8cpp}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/sorter.cpp File Reference}
+\label{sorter_8cpp}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/sorter.cpp@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/sorter.cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}router.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rLink.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sorter_8cpp_ad5d379ac6d30b0fd4cd867df5be07af9}{rsort} (list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList})
+\begin{DoxyCompactList}\small\item\em The sorting algorithm is a modified first fit bin packing algorithm. \item\end{DoxyCompactList}\item 
+bool \hyperlink{sorter_8cpp_a7b09dd0dda6927944851848846d890ca}{rcompare} (\hyperlink{classrouter}{router} \&lr, \hyperlink{classrouter}{router} \&rr)
+\item 
+list$<$ \hyperlink{classrLink}{rLink} $>$ \hyperlink{sorter_8cpp_a45043866e606400615cec196f18a0f38}{lsort} (list$<$ \hyperlink{classrLink}{rLink} $>$ \hyperlink{SCESApplication_8cpp_af9e84ea24bf6207e0d3ac5eade613e49}{lList})
+\item 
+bool \hyperlink{sorter_8cpp_a64a35fd92e648ef82dbfbb7c91319d3f}{lcompare} (\hyperlink{classrLink}{rLink} \&ll, \hyperlink{classrLink}{rLink} \&rl)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sorter_8cpp_a64a35fd92e648ef82dbfbb7c91319d3f}{
+\index{sorter.cpp@{sorter.cpp}!lcompare@{lcompare}}
+\index{lcompare@{lcompare}!sorter.cpp@{sorter.cpp}}
+\subsubsection[{lcompare}]{\setlength{\rightskip}{0pt plus 5cm}bool lcompare (
+\begin{DoxyParamCaption}
+\item[{{\bf rLink} \&}]{ ll, }
+\item[{{\bf rLink} \&}]{ rl}
+\end{DoxyParamCaption}
+)}}
+\label{sorter_8cpp_a64a35fd92e648ef82dbfbb7c91319d3f}
+\hypertarget{sorter_8cpp_a45043866e606400615cec196f18a0f38}{
+\index{sorter.cpp@{sorter.cpp}!lsort@{lsort}}
+\index{lsort@{lsort}!sorter.cpp@{sorter.cpp}}
+\subsubsection[{lsort}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf rLink}$>$ lsort (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf rLink} $>$}]{ lList}
+\end{DoxyParamCaption}
+)}}
+\label{sorter_8cpp_a45043866e606400615cec196f18a0f38}
+\hypertarget{sorter_8cpp_a7b09dd0dda6927944851848846d890ca}{
+\index{sorter.cpp@{sorter.cpp}!rcompare@{rcompare}}
+\index{rcompare@{rcompare}!sorter.cpp@{sorter.cpp}}
+\subsubsection[{rcompare}]{\setlength{\rightskip}{0pt plus 5cm}bool rcompare (
+\begin{DoxyParamCaption}
+\item[{{\bf router} \&}]{ lr, }
+\item[{{\bf router} \&}]{ rr}
+\end{DoxyParamCaption}
+)}}
+\label{sorter_8cpp_a7b09dd0dda6927944851848846d890ca}
+\hypertarget{sorter_8cpp_ad5d379ac6d30b0fd4cd867df5be07af9}{
+\index{sorter.cpp@{sorter.cpp}!rsort@{rsort}}
+\index{rsort@{rsort}!sorter.cpp@{sorter.cpp}}
+\subsubsection[{rsort}]{\setlength{\rightskip}{0pt plus 5cm}void rsort (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf router} $>$ \&}]{ rList}
+\end{DoxyParamCaption}
+)}}
+\label{sorter_8cpp_ad5d379ac6d30b0fd4cd867df5be07af9}
+
+
+The sorting algorithm is a modified first fit bin packing algorithm. 
+
+After reading the list of routers from a text configuration file, the algorithm sorts the routers according to their efficiency if \_\-SORT is defined.
+
+Procedure: \begin{DoxyItemize}
+\item sort the routers according to (only router power considered for sorting the routers): \begin{eqnarray} \eta_{_{NIC-}} = \frac{C_{r}}{P_{r}} \end{eqnarray} OR (both link and router power considered for sorting the routers) \begin{eqnarray} \eta_{_{NIC+}} = \frac{C_{r}}{P_{r} + \sum_{i=1}^N{P_{rl}}} \end{eqnarray} \item sort the links on each router according to: \begin{eqnarray} \eta_{_l} = \frac{C_{rl}}{P_{rl}} \end{eqnarray} 
+\begin{DoxyParams}{Parameters}
+\item[{\em rList}]list of routers \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rList ordered list of routers 
+\end{DoxyReturn}
+\end{DoxyItemize}

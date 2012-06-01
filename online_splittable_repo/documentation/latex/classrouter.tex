@@ -1,0 +1,296 @@
+\hypertarget{classrouter}{
+\section{router Class Reference}
+\label{classrouter}\index{router@{router}}
+}
+
+
+Multistage architecture router class reference.  
+
+
+
+
+{\ttfamily \#include $<$router.h$>$}
+
+Inheritance diagram for router:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrouter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrouter_af5559739f6e4f9b1c7f7bf80e32f6cd9}{router} ()
+\begin{DoxyCompactList}\small\item\em Construct a router. \item\end{DoxyCompactList}\item 
+\hyperlink{classrouter_a43d7888550284a3bffff71abf6c087eb}{router} (int, string, double, double, int, int)
+\item 
+\hyperlink{classrouter_a64870f29b48d6ee6276ec27b1b18e189}{$\sim$router} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+list$<$ \hyperlink{classrLink}{rLink} $>$ \hyperlink{classrouter_a36115bd5923217c64922b2231f05c304}{getRListLink} ()
+\begin{DoxyCompactList}\small\item\em Gets a router's link list. \item\end{DoxyCompactList}\item 
+double \hyperlink{classrouter_a0c1d4a7689e992d90b0fcbf4a958c8b4}{getActualCapacity} ()
+\begin{DoxyCompactList}\small\item\em Gets actual capacity of a router. \item\end{DoxyCompactList}\item 
+double \hyperlink{classrouter_a7d5187977fd2dbf2fa562d3953647699}{getResidual} ()
+\begin{DoxyCompactList}\small\item\em Gets residual capacity of a router. \item\end{DoxyCompactList}\item 
+double \hyperlink{classrouter_a425b6d8372b0951a77097d0e6b49914a}{getTotalPower} ()
+\begin{DoxyCompactList}\small\item\em Get total power of a router = router power + sum of power of the links there of. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classrouter_aaa3d78b2556a095f725d5a2202265d55}{getFlag} ()
+\begin{DoxyCompactList}\small\item\em Gets if a flag is set or not. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_a20f58c16edd3ca8d8afb73cf9f27f549}{setLList} (\hyperlink{classrLink}{rLink})
+\begin{DoxyCompactList}\small\item\em Sets a router's link list. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_a28908a05b7e50a0ab45481c94c8042a8}{setRLinkList} (list$<$ \hyperlink{classrLink}{rLink} $>$)
+\begin{DoxyCompactList}\small\item\em Overwrite a router's link list if required after some modification. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_a90c5339e7bed5597f06be903305ef588}{setActualCapacity} (double)
+\begin{DoxyCompactList}\small\item\em Sets a router's capacity. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_a9b06f4e341fea7bf5a853b0a2caf1d2a}{setTotalPower} (double)
+\begin{DoxyCompactList}\small\item\em Sets a router's total power consumption = router power + sum of power consumption of links thereof. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_ac839466bae2c42cee73a33b4d185f48a}{setResidual} (double)
+\begin{DoxyCompactList}\small\item\em Sets residual capacity. \item\end{DoxyCompactList}\item 
+void \hyperlink{classrouter_ab4e2af9a6d0412fa8d3e6cea8b411f7c}{setFlag} (bool)
+\begin{DoxyCompactList}\small\item\em Sets/Resets router flag. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multistage architecture router class reference. It inherits device class and creates a new router with list of links in the same router.
+
+{\bfseries Usage Example:} 
+\begin{DoxyCode}
+ router *r = new router(1, "router_1", 0, 0, 0, 0)
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{device(int ,string ,double ,double ,int ,int )} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classrouter_af5559739f6e4f9b1c7f7bf80e32f6cd9}{
+\index{router@{router}!router@{router}}
+\index{router@{router}!router@{router}}
+\subsubsection[{router}]{\setlength{\rightskip}{0pt plus 5cm}router::router (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classrouter_af5559739f6e4f9b1c7f7bf80e32f6cd9}
+
+
+Construct a router. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ID}]router identification number \item[{\em name}]router name \item[{\em capacity}]router capacity \item[{\em power}]router power consumption \item[{\em nr\_\-links}]number of links contained inside a router \item[{\em state}]router state: ON/OFF \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{device(int ,string ,double ,double ,int ,int )} 
+\end{DoxySeeAlso}
+\hypertarget{classrouter_a43d7888550284a3bffff71abf6c087eb}{
+\index{router@{router}!router@{router}}
+\index{router@{router}!router@{router}}
+\subsubsection[{router}]{\setlength{\rightskip}{0pt plus 5cm}router::router (
+\begin{DoxyParamCaption}
+\item[{int}]{ ID, }
+\item[{string}]{ name, }
+\item[{double}]{ capacity, }
+\item[{double}]{ power, }
+\item[{int}]{ state, }
+\item[{int}]{ nr\_\-links}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a43d7888550284a3bffff71abf6c087eb}
+\hypertarget{classrouter_a64870f29b48d6ee6276ec27b1b18e189}{
+\index{router@{router}!$\sim$router@{$\sim$router}}
+\index{$\sim$router@{$\sim$router}!router@{router}}
+\subsubsection[{$\sim$router}]{\setlength{\rightskip}{0pt plus 5cm}router::$\sim$router (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classrouter_a64870f29b48d6ee6276ec27b1b18e189}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classrouter_a0c1d4a7689e992d90b0fcbf4a958c8b4}{
+\index{router@{router}!getActualCapacity@{getActualCapacity}}
+\index{getActualCapacity@{getActualCapacity}!router@{router}}
+\subsubsection[{getActualCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double router::getActualCapacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a0c1d4a7689e992d90b0fcbf4a958c8b4}
+
+
+Gets actual capacity of a router. 
+
+\begin{DoxyReturn}{Returns}
+actual capacity of a router 
+\end{DoxyReturn}
+\hypertarget{classrouter_aaa3d78b2556a095f725d5a2202265d55}{
+\index{router@{router}!getFlag@{getFlag}}
+\index{getFlag@{getFlag}!router@{router}}
+\subsubsection[{getFlag}]{\setlength{\rightskip}{0pt plus 5cm}bool router::getFlag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_aaa3d78b2556a095f725d5a2202265d55}
+
+
+Gets if a flag is set or not. 
+
+\begin{DoxyReturn}{Returns}
+usage flag indicator 
+\end{DoxyReturn}
+\hypertarget{classrouter_a7d5187977fd2dbf2fa562d3953647699}{
+\index{router@{router}!getResidual@{getResidual}}
+\index{getResidual@{getResidual}!router@{router}}
+\subsubsection[{getResidual}]{\setlength{\rightskip}{0pt plus 5cm}double router::getResidual (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a7d5187977fd2dbf2fa562d3953647699}
+
+
+Gets residual capacity of a router. 
+
+\begin{DoxyReturn}{Returns}
+residual capacity of a router 
+\end{DoxyReturn}
+\hypertarget{classrouter_a36115bd5923217c64922b2231f05c304}{
+\index{router@{router}!getRListLink@{getRListLink}}
+\index{getRListLink@{getRListLink}!router@{router}}
+\subsubsection[{getRListLink}]{\setlength{\rightskip}{0pt plus 5cm}list$<$ {\bf rLink} $>$ router::getRListLink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a36115bd5923217c64922b2231f05c304}
+
+
+Gets a router's link list. 
+
+\begin{DoxyReturn}{Returns}
+list of links on a router 
+\end{DoxyReturn}
+\hypertarget{classrouter_a425b6d8372b0951a77097d0e6b49914a}{
+\index{router@{router}!getTotalPower@{getTotalPower}}
+\index{getTotalPower@{getTotalPower}!router@{router}}
+\subsubsection[{getTotalPower}]{\setlength{\rightskip}{0pt plus 5cm}double router::getTotalPower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a425b6d8372b0951a77097d0e6b49914a}
+
+
+Get total power of a router = router power + sum of power of the links there of. 
+
+\begin{DoxyReturn}{Returns}
+total power of a router 
+\end{DoxyReturn}
+\hypertarget{classrouter_a90c5339e7bed5597f06be903305ef588}{
+\index{router@{router}!setActualCapacity@{setActualCapacity}}
+\index{setActualCapacity@{setActualCapacity}!router@{router}}
+\subsubsection[{setActualCapacity}]{\setlength{\rightskip}{0pt plus 5cm}void router::setActualCapacity (
+\begin{DoxyParamCaption}
+\item[{double}]{ actualCapacity}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a90c5339e7bed5597f06be903305ef588}
+
+
+Sets a router's capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em actualCapacity}]router capacity \end{DoxyParams}
+\hypertarget{classrouter_ab4e2af9a6d0412fa8d3e6cea8b411f7c}{
+\index{router@{router}!setFlag@{setFlag}}
+\index{setFlag@{setFlag}!router@{router}}
+\subsubsection[{setFlag}]{\setlength{\rightskip}{0pt plus 5cm}void router::setFlag (
+\begin{DoxyParamCaption}
+\item[{bool}]{ flag}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_ab4e2af9a6d0412fa8d3e6cea8b411f7c}
+
+
+Sets/Resets router flag. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em flag}]a boolean value: 1 if the router is used in routing operation, 0 otherwise \end{DoxyParams}
+\hypertarget{classrouter_a20f58c16edd3ca8d8afb73cf9f27f549}{
+\index{router@{router}!setLList@{setLList}}
+\index{setLList@{setLList}!router@{router}}
+\subsubsection[{setLList}]{\setlength{\rightskip}{0pt plus 5cm}void router::setLList (
+\begin{DoxyParamCaption}
+\item[{{\bf rLink}}]{ l}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a20f58c16edd3ca8d8afb73cf9f27f549}
+
+
+Sets a router's link list. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em l}]link with all its attributes \end{DoxyParams}
+\hypertarget{classrouter_ac839466bae2c42cee73a33b4d185f48a}{
+\index{router@{router}!setResidual@{setResidual}}
+\index{setResidual@{setResidual}!router@{router}}
+\subsubsection[{setResidual}]{\setlength{\rightskip}{0pt plus 5cm}void router::setResidual (
+\begin{DoxyParamCaption}
+\item[{double}]{ residual}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_ac839466bae2c42cee73a33b4d185f48a}
+
+
+Sets residual capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em residual}]\end{DoxyParams}
+\hypertarget{classrouter_a28908a05b7e50a0ab45481c94c8042a8}{
+\index{router@{router}!setRLinkList@{setRLinkList}}
+\index{setRLinkList@{setRLinkList}!router@{router}}
+\subsubsection[{setRLinkList}]{\setlength{\rightskip}{0pt plus 5cm}void router::setRLinkList (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf rLink} $>$}]{ lList}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a28908a05b7e50a0ab45481c94c8042a8}
+
+
+Overwrite a router's link list if required after some modification. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em lList}]link list \end{DoxyParams}
+\hypertarget{classrouter_a9b06f4e341fea7bf5a853b0a2caf1d2a}{
+\index{router@{router}!setTotalPower@{setTotalPower}}
+\index{setTotalPower@{setTotalPower}!router@{router}}
+\subsubsection[{setTotalPower}]{\setlength{\rightskip}{0pt plus 5cm}void router::setTotalPower (
+\begin{DoxyParamCaption}
+\item[{double}]{ totalP}
+\end{DoxyParamCaption}
+)}}
+\label{classrouter_a9b06f4e341fea7bf5a853b0a2caf1d2a}
+
+
+Sets a router's total power consumption = router power + sum of power consumption of links thereof. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em totalP}]total power consumption of a router \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/\hyperlink{router_8h}{router.h}\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/\hyperlink{router_8cpp}{router.cpp}\end{DoxyCompactItemize}

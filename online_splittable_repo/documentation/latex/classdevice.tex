@@ -1,0 +1,270 @@
+\hypertarget{classdevice}{
+\section{device Class Reference}
+\label{classdevice}\index{device@{device}}
+}
+
+
+Basic class for devices in the multistage architecture.  
+
+
+
+
+{\ttfamily \#include $<$device.h$>$}
+
+Inheritance diagram for device:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdevice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdevice_a95ab42e0b2e738637d3414347fa5559c}{device} ()
+\begin{DoxyCompactList}\small\item\em Construct multistage architecture and routers there in. \item\end{DoxyCompactList}\item 
+\hyperlink{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{device} (int, string, double, double, int, int)
+\item 
+\hyperlink{classdevice_a3aa4a2a68f49628354dbe33de584f726}{device} (int, string, double, double, int)
+\begin{DoxyCompactList}\small\item\em Construct multistage architecture and routers there in. \item\end{DoxyCompactList}\item 
+\hyperlink{classdevice_a08545ac77231c68a27c32633a9730a33}{$\sim$device} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+int \hyperlink{classdevice_a5b73405bc8184085f92306d4f323b572}{getID} ()
+\begin{DoxyCompactList}\small\item\em Gets device identification number. \item\end{DoxyCompactList}\item 
+string \hyperlink{classdevice_a9dc7119476febd7ba47060d74ba37e20}{getName} ()
+\begin{DoxyCompactList}\small\item\em Gets device name. \item\end{DoxyCompactList}\item 
+double \hyperlink{classdevice_ae444f5ce9e539235bc5df36f7b47609c}{getCapacity} ()
+\begin{DoxyCompactList}\small\item\em Gets device capacity. \item\end{DoxyCompactList}\item 
+double \hyperlink{classdevice_af7b6d78ad457ad75a5f3ed2b40266017}{getPower} ()
+\begin{DoxyCompactList}\small\item\em Gets device power consumption. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classdevice_a287ef719b436c552cb78f498869ce590}{getState} ()
+\begin{DoxyCompactList}\small\item\em Gets device state. \item\end{DoxyCompactList}\item 
+int \hyperlink{classdevice_aba1387d01eac1fa58a5386395b368384}{getNr\_\-device} ()
+\begin{DoxyCompactList}\small\item\em Gets number of devices contained inside a device. \item\end{DoxyCompactList}\item 
+void \hyperlink{classdevice_a66b66e2bce25b091d651ee6336f6f40e}{setCapacity} (double)
+\begin{DoxyCompactList}\small\item\em Sets device capacity. \item\end{DoxyCompactList}\item 
+void \hyperlink{classdevice_a43b8093ad785d5b5787751a7ede0ae73}{setPower} (double)
+\begin{DoxyCompactList}\small\item\em Sets device power consumption. \item\end{DoxyCompactList}\item 
+void \hyperlink{classdevice_a8479767364d2d7a6e349552eb6bae023}{setState} (bool)
+\begin{DoxyCompactList}\small\item\em Sets device state. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic class for devices in the multistage architecture. Inherited by multistage, routers and links 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classdevice_a95ab42e0b2e738637d3414347fa5559c}{
+\index{device@{device}!device@{device}}
+\index{device@{device}!device@{device}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}device::device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdevice_a95ab42e0b2e738637d3414347fa5559c}
+
+
+Construct multistage architecture and routers there in. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ID}]device identification number \item[{\em name}]device name \item[{\em capacity}]device capacity \item[{\em power}]device power consumption \item[{\em nr\_\-device}]number of devices contained inside: multistage contain routers and routers contain links \item[{\em state}]device state: ON/OFF \end{DoxyParams}
+\hypertarget{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{
+\index{device@{device}!device@{device}}
+\index{device@{device}!device@{device}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}device::device (
+\begin{DoxyParamCaption}
+\item[{int}]{ ID, }
+\item[{string}]{ name, }
+\item[{double}]{ capacity, }
+\item[{double}]{ power, }
+\item[{int}]{ state, }
+\item[{int}]{ nr\_\-device}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}
+\hypertarget{classdevice_a3aa4a2a68f49628354dbe33de584f726}{
+\index{device@{device}!device@{device}}
+\index{device@{device}!device@{device}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}device::device (
+\begin{DoxyParamCaption}
+\item[{int}]{ ID, }
+\item[{string}]{ name, }
+\item[{double}]{ capacity, }
+\item[{double}]{ power, }
+\item[{int}]{ state}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a3aa4a2a68f49628354dbe33de584f726}
+
+
+Construct multistage architecture and routers there in. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ID}]device identification \item[{\em name}]device name \item[{\em capacity}]device capacity \item[{\em power}]device power consumption \item[{\em state}]device state: ON/OFF \end{DoxyParams}
+\hypertarget{classdevice_a08545ac77231c68a27c32633a9730a33}{
+\index{device@{device}!$\sim$device@{$\sim$device}}
+\index{$\sim$device@{$\sim$device}!device@{device}}
+\subsubsection[{$\sim$device}]{\setlength{\rightskip}{0pt plus 5cm}device::$\sim$device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classdevice_a08545ac77231c68a27c32633a9730a33}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdevice_ae444f5ce9e539235bc5df36f7b47609c}{
+\index{device@{device}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!device@{device}}
+\subsubsection[{getCapacity}]{\setlength{\rightskip}{0pt plus 5cm}double device::getCapacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_ae444f5ce9e539235bc5df36f7b47609c}
+
+
+Gets device capacity. 
+
+\begin{DoxyReturn}{Returns}
+device capacity 
+\end{DoxyReturn}
+\hypertarget{classdevice_a5b73405bc8184085f92306d4f323b572}{
+\index{device@{device}!getID@{getID}}
+\index{getID@{getID}!device@{device}}
+\subsubsection[{getID}]{\setlength{\rightskip}{0pt plus 5cm}int device::getID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a5b73405bc8184085f92306d4f323b572}
+
+
+Gets device identification number. 
+
+\begin{DoxyReturn}{Returns}
+device identification number 
+\end{DoxyReturn}
+\hypertarget{classdevice_a9dc7119476febd7ba47060d74ba37e20}{
+\index{device@{device}!getName@{getName}}
+\index{getName@{getName}!device@{device}}
+\subsubsection[{getName}]{\setlength{\rightskip}{0pt plus 5cm}string device::getName (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a9dc7119476febd7ba47060d74ba37e20}
+
+
+Gets device name. 
+
+\begin{DoxyReturn}{Returns}
+device name 
+\end{DoxyReturn}
+\hypertarget{classdevice_aba1387d01eac1fa58a5386395b368384}{
+\index{device@{device}!getNr\_\-device@{getNr\_\-device}}
+\index{getNr\_\-device@{getNr\_\-device}!device@{device}}
+\subsubsection[{getNr\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}int device::getNr\_\-device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_aba1387d01eac1fa58a5386395b368384}
+
+
+Gets number of devices contained inside a device. 
+
+\begin{DoxyReturn}{Returns}
+Number of devices contained inside a device. For example the number of routers in a multistage architecture 
+\end{DoxyReturn}
+\hypertarget{classdevice_af7b6d78ad457ad75a5f3ed2b40266017}{
+\index{device@{device}!getPower@{getPower}}
+\index{getPower@{getPower}!device@{device}}
+\subsubsection[{getPower}]{\setlength{\rightskip}{0pt plus 5cm}double device::getPower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_af7b6d78ad457ad75a5f3ed2b40266017}
+
+
+Gets device power consumption. 
+
+\begin{DoxyReturn}{Returns}
+device power 
+\end{DoxyReturn}
+\hypertarget{classdevice_a287ef719b436c552cb78f498869ce590}{
+\index{device@{device}!getState@{getState}}
+\index{getState@{getState}!device@{device}}
+\subsubsection[{getState}]{\setlength{\rightskip}{0pt plus 5cm}bool device::getState (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a287ef719b436c552cb78f498869ce590}
+
+
+Gets device state. 
+
+\begin{DoxyReturn}{Returns}
+device state 
+\end{DoxyReturn}
+\hypertarget{classdevice_a66b66e2bce25b091d651ee6336f6f40e}{
+\index{device@{device}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!device@{device}}
+\subsubsection[{setCapacity}]{\setlength{\rightskip}{0pt plus 5cm}void device::setCapacity (
+\begin{DoxyParamCaption}
+\item[{double}]{ capacity}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a66b66e2bce25b091d651ee6336f6f40e}
+
+
+Sets device capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em capacity}]capacity of the device \end{DoxyParams}
+\hypertarget{classdevice_a43b8093ad785d5b5787751a7ede0ae73}{
+\index{device@{device}!setPower@{setPower}}
+\index{setPower@{setPower}!device@{device}}
+\subsubsection[{setPower}]{\setlength{\rightskip}{0pt plus 5cm}void device::setPower (
+\begin{DoxyParamCaption}
+\item[{double}]{ power}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a43b8093ad785d5b5787751a7ede0ae73}
+
+
+Sets device power consumption. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em power}]power consumption of the device \end{DoxyParams}
+\hypertarget{classdevice_a8479767364d2d7a6e349552eb6bae023}{
+\index{device@{device}!setState@{setState}}
+\index{setState@{setState}!device@{device}}
+\subsubsection[{setState}]{\setlength{\rightskip}{0pt plus 5cm}void device::setState (
+\begin{DoxyParamCaption}
+\item[{bool}]{ state}
+\end{DoxyParamCaption}
+)}}
+\label{classdevice_a8479767364d2d7a6e349552eb6bae023}
+
+
+Sets device state. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em state}]the stare fo the device: ON/OFF \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/\hyperlink{device_8h}{device.h}\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/\hyperlink{device_8cpp}{device.cpp}\end{DoxyCompactItemize}

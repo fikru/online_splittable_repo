@@ -1,0 +1,84 @@
+\hypertarget{classtrafficgen}{
+\section{trafficgen Class Reference}
+\label{classtrafficgen}\index{trafficgen@{trafficgen}}
+}
+
+
+Traffic generator.  
+
+
+
+
+{\ttfamily \#include $<$trafficgen.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtrafficgen_a5dff07c6da8f8b999ddaea3f66f35f97}{trafficgen} ()
+\begin{DoxyCompactList}\small\item\em constructor \item\end{DoxyCompactList}\item 
+\hyperlink{classtrafficgen_ac354957233749112711e372977013674}{$\sim$trafficgen} ()
+\begin{DoxyCompactList}\small\item\em destructor \item\end{DoxyCompactList}\item 
+double \hyperlink{classtrafficgen_ab91f6ea4b48657844b9c925d3d1c8466}{setLoad} (double, double, long $\ast$)
+\begin{DoxyCompactList}\small\item\em sets and return a new load \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Traffic generator. Generate a uniformly distributed traffic load in a given range. The maximum is set to the architecture capacity 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtrafficgen_a5dff07c6da8f8b999ddaea3f66f35f97}{
+\index{trafficgen@{trafficgen}!trafficgen@{trafficgen}}
+\index{trafficgen@{trafficgen}!trafficgen@{trafficgen}}
+\subsubsection[{trafficgen}]{\setlength{\rightskip}{0pt plus 5cm}trafficgen::trafficgen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtrafficgen_a5dff07c6da8f8b999ddaea3f66f35f97}
+
+
+constructor 
+
+\hypertarget{classtrafficgen_ac354957233749112711e372977013674}{
+\index{trafficgen@{trafficgen}!$\sim$trafficgen@{$\sim$trafficgen}}
+\index{$\sim$trafficgen@{$\sim$trafficgen}!trafficgen@{trafficgen}}
+\subsubsection[{$\sim$trafficgen}]{\setlength{\rightskip}{0pt plus 5cm}trafficgen::$\sim$trafficgen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classtrafficgen_ac354957233749112711e372977013674}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtrafficgen_ab91f6ea4b48657844b9c925d3d1c8466}{
+\index{trafficgen@{trafficgen}!setLoad@{setLoad}}
+\index{setLoad@{setLoad}!trafficgen@{trafficgen}}
+\subsubsection[{setLoad}]{\setlength{\rightskip}{0pt plus 5cm}double trafficgen::setLoad (
+\begin{DoxyParamCaption}
+\item[{double}]{ min, }
+\item[{double}]{ max, }
+\item[{long $\ast$}]{ seed}
+\end{DoxyParamCaption}
+)}}
+\label{classtrafficgen_ab91f6ea4b48657844b9c925d3d1c8466}
+
+
+sets and return a new load 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em min}]the minimum traffic = 0 \item[{\em max}]the maximum traffic = the maximum architecture capacity \item[{\em seed}]to seed the random generator \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lLoad current trafic load 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/\hyperlink{trafficgen_8h}{trafficgen.h}\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/\hyperlink{trafficgen_8cpp}{trafficgen.cpp}\end{DoxyCompactItemize}

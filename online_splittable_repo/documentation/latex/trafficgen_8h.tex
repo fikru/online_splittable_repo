@@ -1,0 +1,56 @@
+\hypertarget{trafficgen_8h}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/trafficgen.h File Reference}
+\label{trafficgen_8h}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/trafficgen.h@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/trafficgen.h}}
+}
+{\ttfamily \#include $<$vector$>$}\par
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtrafficgen}{trafficgen}
+\begin{DoxyCompactList}\small\item\em Traffic generator. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{trafficgen_8h_a6f9a7eb089c51e94183a653806a9e2d5}{rnd32} (long)
+\begin{DoxyCompactList}\small\item\em Congruential generator of pseudorandom sequences of numbers uniformly distributed between 1 and 2147483646, using the congruential relation: Xn+1 = 16807 $\ast$ Xn mod 2147483647 . \item\end{DoxyCompactList}\item 
+double \hyperlink{trafficgen_8h_a6a183e2a8fb9f18135efe53d39808107}{uniform} (double, double, long $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{trafficgen_8h_a6f9a7eb089c51e94183a653806a9e2d5}{
+\index{trafficgen.h@{trafficgen.h}!rnd32@{rnd32}}
+\index{rnd32@{rnd32}!trafficgen.h@{trafficgen.h}}
+\subsubsection[{rnd32}]{\setlength{\rightskip}{0pt plus 5cm}long rnd32 (
+\begin{DoxyParamCaption}
+\item[{long}]{ seed}
+\end{DoxyParamCaption}
+)}}
+\label{trafficgen_8h_a6f9a7eb089c51e94183a653806a9e2d5}
+
+
+Congruential generator of pseudorandom sequences of numbers uniformly distributed between 1 and 2147483646, using the congruential relation: Xn+1 = 16807 $\ast$ Xn mod 2147483647 . 
+
+The input to the routine is the integer Xn, while the returned integer is the number Xn+1. 
+\begin{DoxyParams}{Parameters}
+\item[{\em seed}]to seed the random generator \end{DoxyParams}
+\hypertarget{trafficgen_8h_a6a183e2a8fb9f18135efe53d39808107}{
+\index{trafficgen.h@{trafficgen.h}!uniform@{uniform}}
+\index{uniform@{uniform}!trafficgen.h@{trafficgen.h}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double uniform (
+\begin{DoxyParamCaption}
+\item[{double}]{ a, }
+\item[{double}]{ b, }
+\item[{long $\ast$}]{ seed}
+\end{DoxyParamCaption}
+)}}
+\label{trafficgen_8h_a6a183e2a8fb9f18135efe53d39808107}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em a}]minimum of the range \item[{\em b}]maximum of the range \item[{\em seed}]to seed the random generator \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a value uniformly distributed between 'a' and 'b' 
+\end{DoxyReturn}

@@ -1,0 +1,179 @@
+\hypertarget{SCESApplication_8cpp}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/SCESApplication.cpp File Reference}
+\label{SCESApplication_8cpp}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/SCESApplication.cpp@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/SCESApplication.cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include $<$string$>$}\par
+{\ttfamily \#include $<$algorithm$>$}\par
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+{\ttfamily \#include $<$list$>$}\par
+{\ttfamily \#include $<$new$>$}\par
+{\ttfamily \#include $<$sys/types.h$>$}\par
+{\ttfamily \#include $<$sys/stat.h$>$}\par
+{\ttfamily \#include $<$unistd.h$>$}\par
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}multistage.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}router.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}timer.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{SCESApplication_8cpp_a415a686e119b3ac9a1b56fd507bde763}{conf\_\-diff} (list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList}, list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_a12a4f3aac5652badbe81ca524dc93c35}{prev\_\-rList})
+\item 
+void \hyperlink{SCESApplication_8cpp_ab4f7aa92fc45d0126d5644e9e76856c0}{actualCapacity} (\hyperlink{classmultistage}{multistage} $\ast$mssr, list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList})
+\item 
+void \hyperlink{SCESApplication_8cpp_a909f72a596655f54fc965e21b6cf0619}{empty\_\-routers} (list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList})
+\item 
+void \hyperlink{SCESApplication_8cpp_ad179db7b04bfd86a67a6a62a36bffdac}{usage} (char $\ast$$\ast$argv)
+\item 
+string \hyperlink{SCESApplication_8cpp_a273933e4e11d3c070d693f00a37ebb9f}{getopt} (char $\ast$$\ast$argv)
+\item 
+int \hyperlink{SCESApplication_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{SCESApplication_8cpp_a6bae32c3dedb47c50ab1c685b7c28ac8}{free\_\-mem} (\hyperlink{classmultistage}{multistage} $\ast$mssr)
+\item 
+void \hyperlink{SCESApplication_8cpp_a2fa4306c185b6008b792e3b7488c52a2}{prevStat} (\hyperlink{classstatistics}{statistics} stat\_\-current)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classstatistics}{statistics} \hyperlink{SCESApplication_8cpp_a7954c93042111158144d41245f95a2f5}{mssr\_\-stat}
+\item 
+\hyperlink{classstatistics}{statistics} \hyperlink{SCESApplication_8cpp_ad379d4b8e83ceea472f6d7e896bdc295}{mssr\_\-stat\_\-current}
+\item 
+\hyperlink{classstatistics}{statistics} \hyperlink{SCESApplication_8cpp_a732338a6def2fcaa705aef8cc8868d25}{unused\_\-instance}
+\item 
+list$<$ \hyperlink{classrouter}{router} $>$ \hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList}
+\item 
+list$<$ \hyperlink{classrouter}{router} $>$ \hyperlink{SCESApplication_8cpp_a12a4f3aac5652badbe81ca524dc93c35}{prev\_\-rList}
+\item 
+list$<$ \hyperlink{classrLink}{rLink} $>$ \hyperlink{SCESApplication_8cpp_af9e84ea24bf6207e0d3ac5eade613e49}{lList}
+\item 
+string \hyperlink{SCESApplication_8cpp_a2d62ba85ba6e1ecc078bb70d8ec593dd}{opt}
+\item 
+int \hyperlink{SCESApplication_8cpp_aceb9e809a00b89dbd4cee8efc1073d44}{conf\_\-change\_\-count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{SCESApplication_8cpp_ab4f7aa92fc45d0126d5644e9e76856c0}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!actualCapacity@{actualCapacity}}
+\index{actualCapacity@{actualCapacity}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{actualCapacity}]{\setlength{\rightskip}{0pt plus 5cm}void actualCapacity (
+\begin{DoxyParamCaption}
+\item[{{\bf multistage} $\ast$}]{ mssr, }
+\item[{list$<$ {\bf router} $>$ \&}]{ rList}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_ab4f7aa92fc45d0126d5644e9e76856c0}
+\hypertarget{SCESApplication_8cpp_a415a686e119b3ac9a1b56fd507bde763}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!conf\_\-diff@{conf\_\-diff}}
+\index{conf\_\-diff@{conf\_\-diff}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{conf\_\-diff}]{\setlength{\rightskip}{0pt plus 5cm}int conf\_\-diff (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf router} $>$ \&}]{ rList, }
+\item[{list$<$ {\bf router} $>$ \&}]{ prev\_\-rList}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_a415a686e119b3ac9a1b56fd507bde763}
+\hypertarget{SCESApplication_8cpp_a909f72a596655f54fc965e21b6cf0619}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!empty\_\-routers@{empty\_\-routers}}
+\index{empty\_\-routers@{empty\_\-routers}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{empty\_\-routers}]{\setlength{\rightskip}{0pt plus 5cm}void empty\_\-routers (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf router} $>$ \&}]{ rList}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_a909f72a596655f54fc965e21b6cf0619}
+\hypertarget{SCESApplication_8cpp_a6bae32c3dedb47c50ab1c685b7c28ac8}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!free\_\-mem@{free\_\-mem}}
+\index{free\_\-mem@{free\_\-mem}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{free\_\-mem}]{\setlength{\rightskip}{0pt plus 5cm}void free\_\-mem (
+\begin{DoxyParamCaption}
+\item[{{\bf multistage} $\ast$}]{ mssr}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_a6bae32c3dedb47c50ab1c685b7c28ac8}
+\hypertarget{SCESApplication_8cpp_a273933e4e11d3c070d693f00a37ebb9f}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!getopt@{getopt}}
+\index{getopt@{getopt}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{getopt}]{\setlength{\rightskip}{0pt plus 5cm}string getopt (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{ argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{SCESApplication_8cpp_a273933e4e11d3c070d693f00a37ebb9f}
+\hypertarget{SCESApplication_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!main@{main}}
+\index{main@{main}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{ argc, }
+\item[{char $\ast$$\ast$}]{ argv}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{SCESApplication_8cpp_a2fa4306c185b6008b792e3b7488c52a2}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!prevStat@{prevStat}}
+\index{prevStat@{prevStat}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{prevStat}]{\setlength{\rightskip}{0pt plus 5cm}void prevStat (
+\begin{DoxyParamCaption}
+\item[{{\bf statistics}}]{ stat\_\-current}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_a2fa4306c185b6008b792e3b7488c52a2}
+\hypertarget{SCESApplication_8cpp_ad179db7b04bfd86a67a6a62a36bffdac}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!usage@{usage}}
+\index{usage@{usage}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void usage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{ argv}
+\end{DoxyParamCaption}
+)}}
+\label{SCESApplication_8cpp_ad179db7b04bfd86a67a6a62a36bffdac}
+
+
+\subsection{Variable Documentation}
+\hypertarget{SCESApplication_8cpp_aceb9e809a00b89dbd4cee8efc1073d44}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!conf\_\-change\_\-count@{conf\_\-change\_\-count}}
+\index{conf\_\-change\_\-count@{conf\_\-change\_\-count}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{conf\_\-change\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf conf\_\-change\_\-count}}}
+\label{SCESApplication_8cpp_aceb9e809a00b89dbd4cee8efc1073d44}
+\hypertarget{SCESApplication_8cpp_af9e84ea24bf6207e0d3ac5eade613e49}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!lList@{lList}}
+\index{lList@{lList}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{lList}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf rLink}$>$ {\bf lList}}}
+\label{SCESApplication_8cpp_af9e84ea24bf6207e0d3ac5eade613e49}
+\hypertarget{SCESApplication_8cpp_a7954c93042111158144d41245f95a2f5}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!mssr\_\-stat@{mssr\_\-stat}}
+\index{mssr\_\-stat@{mssr\_\-stat}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{mssr\_\-stat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statistics} {\bf mssr\_\-stat}}}
+\label{SCESApplication_8cpp_a7954c93042111158144d41245f95a2f5}
+\hypertarget{SCESApplication_8cpp_ad379d4b8e83ceea472f6d7e896bdc295}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!mssr\_\-stat\_\-current@{mssr\_\-stat\_\-current}}
+\index{mssr\_\-stat\_\-current@{mssr\_\-stat\_\-current}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{mssr\_\-stat\_\-current}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statistics} {\bf mssr\_\-stat\_\-current}}}
+\label{SCESApplication_8cpp_ad379d4b8e83ceea472f6d7e896bdc295}
+\hypertarget{SCESApplication_8cpp_a2d62ba85ba6e1ecc078bb70d8ec593dd}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!opt@{opt}}
+\index{opt@{opt}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{opt}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf opt}}}
+\label{SCESApplication_8cpp_a2d62ba85ba6e1ecc078bb70d8ec593dd}
+\hypertarget{SCESApplication_8cpp_a12a4f3aac5652badbe81ca524dc93c35}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!prev\_\-rList@{prev\_\-rList}}
+\index{prev\_\-rList@{prev\_\-rList}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{prev\_\-rList}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf router}$>$ {\bf prev\_\-rList}}}
+\label{SCESApplication_8cpp_a12a4f3aac5652badbe81ca524dc93c35}
+\hypertarget{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!rList@{rList}}
+\index{rList@{rList}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{rList}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf router}$>$ {\bf rList}}}
+\label{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}
+\hypertarget{SCESApplication_8cpp_a732338a6def2fcaa705aef8cc8868d25}{
+\index{SCESApplication.cpp@{SCESApplication.cpp}!unused\_\-instance@{unused\_\-instance}}
+\index{unused\_\-instance@{unused\_\-instance}!SCESApplication.cpp@{SCESApplication.cpp}}
+\subsubsection[{unused\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statistics} {\bf unused\_\-instance}}}
+\label{SCESApplication_8cpp_a732338a6def2fcaa705aef8cc8868d25}

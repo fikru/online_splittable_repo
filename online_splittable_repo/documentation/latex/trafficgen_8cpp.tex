@@ -1,0 +1,92 @@
+\hypertarget{trafficgen_8cpp}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/trafficgen.cpp File Reference}
+\label{trafficgen_8cpp}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/trafficgen.cpp@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/trafficgen.cpp}}
+}
+{\ttfamily \#include \char`\"{}trafficgen.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{trafficgen_8cpp_a2c63ae95fe7c6106ae1ec9c283afa486}{MODULE}~2147483647
+\item 
+\#define \hyperlink{trafficgen_8cpp_a955f504eccf76b4eb2489c0adab03121}{A}~16807
+\item 
+\#define \hyperlink{trafficgen_8cpp_a34fe56a992e11eb3a151d5617bcea6cc}{LASTXN}~127773
+\item 
+\#define \hyperlink{trafficgen_8cpp_adf525720eaba190c4a03b5902c4d52d6}{UPTOMOD}~-\/2836
+\item 
+\#define \hyperlink{trafficgen_8cpp_a7e8b3c8482e593df0ace933ad3de22ee}{RATIO}~0.46566128e-\/9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{trafficgen_8cpp_ab2f193f6c8be5ef70151712bbf3ba402}{rnd32} (long seed)
+\begin{DoxyCompactList}\small\item\em Congruential generator of pseudorandom sequences of numbers uniformly distributed between 1 and 2147483646, using the congruential relation: Xn+1 = 16807 $\ast$ Xn mod 2147483647 . \item\end{DoxyCompactList}\item 
+double \hyperlink{trafficgen_8cpp_accbbe7ac5a0e2997f7cab5ddbd2280dc}{uniform} (double a, double b, long $\ast$seed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{trafficgen_8cpp_a955f504eccf76b4eb2489c0adab03121}{
+\index{trafficgen.cpp@{trafficgen.cpp}!A@{A}}
+\index{A@{A}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}\#define A~16807}}
+\label{trafficgen_8cpp_a955f504eccf76b4eb2489c0adab03121}
+\hypertarget{trafficgen_8cpp_a34fe56a992e11eb3a151d5617bcea6cc}{
+\index{trafficgen.cpp@{trafficgen.cpp}!LASTXN@{LASTXN}}
+\index{LASTXN@{LASTXN}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{LASTXN}]{\setlength{\rightskip}{0pt plus 5cm}\#define LASTXN~127773}}
+\label{trafficgen_8cpp_a34fe56a992e11eb3a151d5617bcea6cc}
+\hypertarget{trafficgen_8cpp_a2c63ae95fe7c6106ae1ec9c283afa486}{
+\index{trafficgen.cpp@{trafficgen.cpp}!MODULE@{MODULE}}
+\index{MODULE@{MODULE}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{MODULE}]{\setlength{\rightskip}{0pt plus 5cm}\#define MODULE~2147483647}}
+\label{trafficgen_8cpp_a2c63ae95fe7c6106ae1ec9c283afa486}
+\hypertarget{trafficgen_8cpp_a7e8b3c8482e593df0ace933ad3de22ee}{
+\index{trafficgen.cpp@{trafficgen.cpp}!RATIO@{RATIO}}
+\index{RATIO@{RATIO}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{RATIO}]{\setlength{\rightskip}{0pt plus 5cm}\#define RATIO~0.46566128e-\/9}}
+\label{trafficgen_8cpp_a7e8b3c8482e593df0ace933ad3de22ee}
+\hypertarget{trafficgen_8cpp_adf525720eaba190c4a03b5902c4d52d6}{
+\index{trafficgen.cpp@{trafficgen.cpp}!UPTOMOD@{UPTOMOD}}
+\index{UPTOMOD@{UPTOMOD}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{UPTOMOD}]{\setlength{\rightskip}{0pt plus 5cm}\#define UPTOMOD~-\/2836}}
+\label{trafficgen_8cpp_adf525720eaba190c4a03b5902c4d52d6}
+
+
+\subsection{Function Documentation}
+\hypertarget{trafficgen_8cpp_ab2f193f6c8be5ef70151712bbf3ba402}{
+\index{trafficgen.cpp@{trafficgen.cpp}!rnd32@{rnd32}}
+\index{rnd32@{rnd32}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{rnd32}]{\setlength{\rightskip}{0pt plus 5cm}long rnd32 (
+\begin{DoxyParamCaption}
+\item[{long}]{ seed}
+\end{DoxyParamCaption}
+)}}
+\label{trafficgen_8cpp_ab2f193f6c8be5ef70151712bbf3ba402}
+
+
+Congruential generator of pseudorandom sequences of numbers uniformly distributed between 1 and 2147483646, using the congruential relation: Xn+1 = 16807 $\ast$ Xn mod 2147483647 . 
+
+The input to the routine is the integer Xn, while the returned integer is the number Xn+1. 
+\begin{DoxyParams}{Parameters}
+\item[{\em seed}]to seed the random generator \end{DoxyParams}
+\hypertarget{trafficgen_8cpp_accbbe7ac5a0e2997f7cab5ddbd2280dc}{
+\index{trafficgen.cpp@{trafficgen.cpp}!uniform@{uniform}}
+\index{uniform@{uniform}!trafficgen.cpp@{trafficgen.cpp}}
+\subsubsection[{uniform}]{\setlength{\rightskip}{0pt plus 5cm}double uniform (
+\begin{DoxyParamCaption}
+\item[{double}]{ a, }
+\item[{double}]{ b, }
+\item[{long $\ast$}]{ seed}
+\end{DoxyParamCaption}
+)}}
+\label{trafficgen_8cpp_accbbe7ac5a0e2997f7cab5ddbd2280dc}
+
+\begin{DoxyParams}{Parameters}
+\item[{\em a}]minimum of the range \item[{\em b}]maximum of the range \item[{\em seed}]to seed the random generator \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a value uniformly distributed between 'a' and 'b' 
+\end{DoxyReturn}

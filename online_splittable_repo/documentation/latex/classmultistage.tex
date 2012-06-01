@@ -1,0 +1,123 @@
+\hypertarget{classmultistage}{
+\section{multistage Class Reference}
+\label{classmultistage}\index{multistage@{multistage}}
+}
+
+
+Multistage architecture class reference.  
+
+
+
+
+{\ttfamily \#include $<$multistage.h$>$}
+
+Inheritance diagram for multistage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmultistage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmultistage_adcbb45a38e0184f037cdc03504dced05}{multistage} (int, string, double, double, int, int)
+\begin{DoxyCompactList}\small\item\em Construct a router. \item\end{DoxyCompactList}\item 
+\hyperlink{classmultistage_a3ce104e1cd528efc9f4f2b8b8c2f54a7}{$\sim$multistage} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+list$<$ \hyperlink{classrouter}{router} $>$ \hyperlink{classmultistage_ad42d7006ba661c60eb4958f8534ad89a}{getRList} ()
+\begin{DoxyCompactList}\small\item\em Gets list of routers in an architecture. \item\end{DoxyCompactList}\item 
+void \hyperlink{classmultistage_a6f79ee151acaff9a49e06a3300371a2c}{setRList} (\hyperlink{classrouter}{router})
+\begin{DoxyCompactList}\small\item\em Sets an architecture's router list. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multistage architecture class reference. It inherits device class and creates a new multistage architecture with list of routers and sets total architecture actual capacity.
+
+{\bfseries Usage Example:} 
+\begin{DoxyCode}
+ multistage *m = new multistage(1, "mssr", 0, 0, 0, 0)
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{device(int ,string ,double ,double ,int ,int )} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmultistage_adcbb45a38e0184f037cdc03504dced05}{
+\index{multistage@{multistage}!multistage@{multistage}}
+\index{multistage@{multistage}!multistage@{multistage}}
+\subsubsection[{multistage}]{\setlength{\rightskip}{0pt plus 5cm}multistage::multistage (
+\begin{DoxyParamCaption}
+\item[{int}]{ ID, }
+\item[{string}]{ name, }
+\item[{double}]{ capacity, }
+\item[{double}]{ power, }
+\item[{int}]{ state, }
+\item[{int}]{ nr\_\-routers}
+\end{DoxyParamCaption}
+)}}
+\label{classmultistage_adcbb45a38e0184f037cdc03504dced05}
+
+
+Construct a router. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em ID}]multistage architecture identification number \item[{\em name}]multistage architecture name \item[{\em capacity}]multistage architecture capacity \item[{\em power}]multistage architecture power consumption \item[{\em nr\_\-routers}]number of routers contained inside a multistage architecture \item[{\em state}]a multistage architecture state: ON/OFF \end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classdevice_a57b9c4ac7a8bd970b81b1154ae79a5de}{device(int ,string ,double ,double ,int ,int )} 
+\end{DoxySeeAlso}
+\hypertarget{classmultistage_a3ce104e1cd528efc9f4f2b8b8c2f54a7}{
+\index{multistage@{multistage}!$\sim$multistage@{$\sim$multistage}}
+\index{$\sim$multistage@{$\sim$multistage}!multistage@{multistage}}
+\subsubsection[{$\sim$multistage}]{\setlength{\rightskip}{0pt plus 5cm}multistage::$\sim$multistage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classmultistage_a3ce104e1cd528efc9f4f2b8b8c2f54a7}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmultistage_ad42d7006ba661c60eb4958f8534ad89a}{
+\index{multistage@{multistage}!getRList@{getRList}}
+\index{getRList@{getRList}!multistage@{multistage}}
+\subsubsection[{getRList}]{\setlength{\rightskip}{0pt plus 5cm}list$<$ {\bf router} $>$ multistage::getRList (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classmultistage_ad42d7006ba661c60eb4958f8534ad89a}
+
+
+Gets list of routers in an architecture. 
+
+\begin{DoxyReturn}{Returns}
+a multistage architecture's router list 
+\end{DoxyReturn}
+\hypertarget{classmultistage_a6f79ee151acaff9a49e06a3300371a2c}{
+\index{multistage@{multistage}!setRList@{setRList}}
+\index{setRList@{setRList}!multistage@{multistage}}
+\subsubsection[{setRList}]{\setlength{\rightskip}{0pt plus 5cm}void multistage::setRList (
+\begin{DoxyParamCaption}
+\item[{{\bf router}}]{ r}
+\end{DoxyParamCaption}
+)}}
+\label{classmultistage_a6f79ee151acaff9a49e06a3300371a2c}
+
+
+Sets an architecture's router list. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em r}]router with all its attributes \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/include/\hyperlink{multistage_8h}{multistage.h}\item 
+/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/\hyperlink{multistage_8cpp}{multistage.cpp}\end{DoxyCompactItemize}

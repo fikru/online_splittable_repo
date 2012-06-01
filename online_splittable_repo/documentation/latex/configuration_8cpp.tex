@@ -1,0 +1,159 @@
+\hypertarget{configuration_8cpp}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/configuration.cpp File Reference}
+\label{configuration_8cpp}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/configuration.cpp@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/configuration.cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$fstream$>$}\par
+{\ttfamily \#include $<$sstream$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{configuration_8cpp_aa446d8f1ad854ac19ac840b76597d734}{isOdd} (int)
+\item 
+void \hyperlink{configuration_8cpp_ad961c7911e652f750f87f3e397a06f1f}{input\_\-config} (string config\_\-file)
+\begin{DoxyCompactList}\small\item\em reads configuration from text file. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{configuration_8cpp_a14328a11ac1e9bc5a669e2d0341e2f54}{nr\_\-flows}
+\begin{DoxyCompactList}\small\item\em nr of traffic flows \item\end{DoxyCompactList}\item 
+int \hyperlink{configuration_8cpp_ac430c7b9fb12fc01885b9465364e3d97}{nr\_\-routers}
+\begin{DoxyCompactList}\small\item\em nr of routers in the architecture \item\end{DoxyCompactList}\item 
+int \hyperlink{configuration_8cpp_a3288b1e9f09032f99fdd54cfd4a26aa9}{nr\_\-links}
+\begin{DoxyCompactList}\small\item\em nr of links in a router \item\end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{configuration_8cpp_a49482e053b5a87760f4c3fe1242cd72b}{traffic}
+\begin{DoxyCompactList}\small\item\em traffic needed to be routed \item\end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{configuration_8cpp_a1299d2dbbe6f58ee6229ef30aa5f5bde}{r\_\-capacity}
+\begin{DoxyCompactList}\small\item\em vector of capacity for each router \item\end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{configuration_8cpp_a5b014c61c7abb7b5d95080985d3d2448}{r\_\-power}
+\begin{DoxyCompactList}\small\item\em vector of power consumption for each router \item\end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{configuration_8cpp_a04f7d3c356c598431b28151df15c7a1e}{l\_\-capacity}
+\begin{DoxyCompactList}\small\item\em vector of capacity for each link on a router \item\end{DoxyCompactList}\item 
+vector$<$ double $>$ \hyperlink{configuration_8cpp_a219826526adf24ccd45b45e6ceab2359}{l\_\-power}
+\begin{DoxyCompactList}\small\item\em vector of power consumption of each link on a router \item\end{DoxyCompactList}\item 
+vector$<$ vector$<$ double $>$ $>$ \hyperlink{configuration_8cpp_a33ae934d11ad20d1de64a6d9aba13623}{all\_\-l\_\-capacity}
+\begin{DoxyCompactList}\small\item\em vector of links on all routers \item\end{DoxyCompactList}\item 
+vector$<$ vector$<$ double $>$ $>$ \hyperlink{configuration_8cpp_a62fe6a3c0e8a9ee6c84275f3a2bb0e79}{all\_\-l\_\-power}
+\begin{DoxyCompactList}\small\item\em vector of power consumption of links on all routers \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{configuration_8cpp_ad961c7911e652f750f87f3e397a06f1f}{
+\index{configuration.cpp@{configuration.cpp}!input\_\-config@{input\_\-config}}
+\index{input\_\-config@{input\_\-config}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{input\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}input\_\-config (
+\begin{DoxyParamCaption}
+\item[{string}]{ config\_\-file}
+\end{DoxyParamCaption}
+)}}
+\label{configuration_8cpp_ad961c7911e652f750f87f3e397a06f1f}
+
+
+reads configuration from text file. 
+
+The configuration of the architecture is described using text file. The algorithm reads this configuration file and convert it into vectors 
+\begin{DoxyParams}{Parameters}
+\item[{\em config\_\-file}]name of the file containing the configuration. The file name passed to the algorithm through main argument \end{DoxyParams}
+\hypertarget{configuration_8cpp_aa446d8f1ad854ac19ac840b76597d734}{
+\index{configuration.cpp@{configuration.cpp}!isOdd@{isOdd}}
+\index{isOdd@{isOdd}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{isOdd}]{\setlength{\rightskip}{0pt plus 5cm}bool isOdd (
+\begin{DoxyParamCaption}
+\item[{int}]{ count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{configuration_8cpp_aa446d8f1ad854ac19ac840b76597d734}
+
+
+\subsection{Variable Documentation}
+\hypertarget{configuration_8cpp_a33ae934d11ad20d1de64a6d9aba13623}{
+\index{configuration.cpp@{configuration.cpp}!all\_\-l\_\-capacity@{all\_\-l\_\-capacity}}
+\index{all\_\-l\_\-capacity@{all\_\-l\_\-capacity}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{all\_\-l\_\-capacity}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector $<$double$>$ $>$ {\bf all\_\-l\_\-capacity}}}
+\label{configuration_8cpp_a33ae934d11ad20d1de64a6d9aba13623}
+
+
+vector of links on all routers 
+
+\hypertarget{configuration_8cpp_a62fe6a3c0e8a9ee6c84275f3a2bb0e79}{
+\index{configuration.cpp@{configuration.cpp}!all\_\-l\_\-power@{all\_\-l\_\-power}}
+\index{all\_\-l\_\-power@{all\_\-l\_\-power}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{all\_\-l\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector $<$double$>$ $>$ {\bf all\_\-l\_\-power}}}
+\label{configuration_8cpp_a62fe6a3c0e8a9ee6c84275f3a2bb0e79}
+
+
+vector of power consumption of links on all routers 
+
+\hypertarget{configuration_8cpp_a04f7d3c356c598431b28151df15c7a1e}{
+\index{configuration.cpp@{configuration.cpp}!l\_\-capacity@{l\_\-capacity}}
+\index{l\_\-capacity@{l\_\-capacity}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{l\_\-capacity}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf l\_\-capacity}}}
+\label{configuration_8cpp_a04f7d3c356c598431b28151df15c7a1e}
+
+
+vector of capacity for each link on a router 
+
+\hypertarget{configuration_8cpp_a219826526adf24ccd45b45e6ceab2359}{
+\index{configuration.cpp@{configuration.cpp}!l\_\-power@{l\_\-power}}
+\index{l\_\-power@{l\_\-power}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{l\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf l\_\-power}}}
+\label{configuration_8cpp_a219826526adf24ccd45b45e6ceab2359}
+
+
+vector of power consumption of each link on a router 
+
+\hypertarget{configuration_8cpp_a14328a11ac1e9bc5a669e2d0341e2f54}{
+\index{configuration.cpp@{configuration.cpp}!nr\_\-flows@{nr\_\-flows}}
+\index{nr\_\-flows@{nr\_\-flows}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{nr\_\-flows}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf nr\_\-flows}}}
+\label{configuration_8cpp_a14328a11ac1e9bc5a669e2d0341e2f54}
+
+
+nr of traffic flows 
+
+\hypertarget{configuration_8cpp_a3288b1e9f09032f99fdd54cfd4a26aa9}{
+\index{configuration.cpp@{configuration.cpp}!nr\_\-links@{nr\_\-links}}
+\index{nr\_\-links@{nr\_\-links}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{nr\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf nr\_\-links}}}
+\label{configuration_8cpp_a3288b1e9f09032f99fdd54cfd4a26aa9}
+
+
+nr of links in a router 
+
+\hypertarget{configuration_8cpp_ac430c7b9fb12fc01885b9465364e3d97}{
+\index{configuration.cpp@{configuration.cpp}!nr\_\-routers@{nr\_\-routers}}
+\index{nr\_\-routers@{nr\_\-routers}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{nr\_\-routers}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf nr\_\-routers}}}
+\label{configuration_8cpp_ac430c7b9fb12fc01885b9465364e3d97}
+
+
+nr of routers in the architecture 
+
+\hypertarget{configuration_8cpp_a1299d2dbbe6f58ee6229ef30aa5f5bde}{
+\index{configuration.cpp@{configuration.cpp}!r\_\-capacity@{r\_\-capacity}}
+\index{r\_\-capacity@{r\_\-capacity}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{r\_\-capacity}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf r\_\-capacity}}}
+\label{configuration_8cpp_a1299d2dbbe6f58ee6229ef30aa5f5bde}
+
+
+vector of capacity for each router 
+
+\hypertarget{configuration_8cpp_a5b014c61c7abb7b5d95080985d3d2448}{
+\index{configuration.cpp@{configuration.cpp}!r\_\-power@{r\_\-power}}
+\index{r\_\-power@{r\_\-power}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{r\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf r\_\-power}}}
+\label{configuration_8cpp_a5b014c61c7abb7b5d95080985d3d2448}
+
+
+vector of power consumption for each router 
+
+\hypertarget{configuration_8cpp_a49482e053b5a87760f4c3fe1242cd72b}{
+\index{configuration.cpp@{configuration.cpp}!traffic@{traffic}}
+\index{traffic@{traffic}!configuration.cpp@{configuration.cpp}}
+\subsubsection[{traffic}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ {\bf traffic}}}
+\label{configuration_8cpp_a49482e053b5a87760f4c3fe1242cd72b}
+
+
+traffic needed to be routed 
+

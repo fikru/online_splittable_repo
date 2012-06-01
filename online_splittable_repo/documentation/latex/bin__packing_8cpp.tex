@@ -1,0 +1,100 @@
+\hypertarget{bin__packing_8cpp}{
+\section{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/bin\_\-packing.cpp File Reference}
+\label{bin__packing_8cpp}\index{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/bin\_\-packing.cpp@{/home/fikru/Desktop/fikru/research/code/online\_\-energy\_\-saving\_\-splittable/bin\_\-packing.cpp}}
+}
+{\ttfamily \#include $<$limits$>$}\par
+{\ttfamily \#include \char`\"{}global.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}rLink.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{bin__packing_8cpp_ad78939de31d26895a7f3816246ef9f04}{pack\_\-routers} (double \&, \hyperlink{classrouter}{router} \&)
+\item 
+void \hyperlink{bin__packing_8cpp_af26d02197ba7bd14a5584d766842dd21}{pack\_\-links} (double \&, \hyperlink{classrLink}{rLink} \&)
+\item 
+\hyperlink{classstatistics}{statistics} \hyperlink{bin__packing_8cpp_a63baeeb26318ce6be17ab91f4dcbd8fa}{bin\_\-packing} (double load\_\-leftover, list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList})
+\item 
+void \hyperlink{bin__packing_8cpp_ab6a031122ec81ed5fce4209bf1050aa9}{ff} (double load\_\-leftover, list$<$ \hyperlink{classrouter}{router} $>$ \&\hyperlink{SCESApplication_8cpp_aae066c5ae750629985dad2d59db3de5a}{rList})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{bin__packing_8cpp_a86c9f04bfa1c110f70a46348b7f9e557}{objective}
+\item 
+bool \hyperlink{bin__packing_8cpp_a6793a4125be91b59e503672eaae9acd5}{packed\_\-flag}
+\item 
+bool \hyperlink{bin__packing_8cpp_a996c583417c1ec6c2bf4396af0eaa0c5}{lpacked\_\-flag}
+\item 
+int \hyperlink{bin__packing_8cpp_ad669c198cf8b952ad5877c1addfb7c78}{nr\_\-r}
+\begin{DoxyCompactList}\small\item\em nr of routers used in current configuration \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{bin__packing_8cpp_a63baeeb26318ce6be17ab91f4dcbd8fa}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!bin\_\-packing@{bin\_\-packing}}
+\index{bin\_\-packing@{bin\_\-packing}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{bin\_\-packing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf statistics} bin\_\-packing (
+\begin{DoxyParamCaption}
+\item[{double}]{ load\_\-leftover, }
+\item[{list$<$ {\bf router} $>$ \&}]{ rList}
+\end{DoxyParamCaption}
+)}}
+\label{bin__packing_8cpp_a63baeeb26318ce6be17ab91f4dcbd8fa}
+\hypertarget{bin__packing_8cpp_ab6a031122ec81ed5fce4209bf1050aa9}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!ff@{ff}}
+\index{ff@{ff}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{ff}]{\setlength{\rightskip}{0pt plus 5cm}void ff (
+\begin{DoxyParamCaption}
+\item[{double}]{ load\_\-leftover, }
+\item[{list$<$ {\bf router} $>$ \&}]{ rList}
+\end{DoxyParamCaption}
+)}}
+\label{bin__packing_8cpp_ab6a031122ec81ed5fce4209bf1050aa9}
+\hypertarget{bin__packing_8cpp_af26d02197ba7bd14a5584d766842dd21}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!pack\_\-links@{pack\_\-links}}
+\index{pack\_\-links@{pack\_\-links}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{pack\_\-links}]{\setlength{\rightskip}{0pt plus 5cm}void pack\_\-links (
+\begin{DoxyParamCaption}
+\item[{double \&}]{ load, }
+\item[{{\bf rLink} \&}]{ l\_\-itr}
+\end{DoxyParamCaption}
+)}}
+\label{bin__packing_8cpp_af26d02197ba7bd14a5584d766842dd21}
+\hypertarget{bin__packing_8cpp_ad78939de31d26895a7f3816246ef9f04}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!pack\_\-routers@{pack\_\-routers}}
+\index{pack\_\-routers@{pack\_\-routers}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{pack\_\-routers}]{\setlength{\rightskip}{0pt plus 5cm}void pack\_\-routers (
+\begin{DoxyParamCaption}
+\item[{double \&}]{ load\_\-leftover, }
+\item[{{\bf router} \&}]{ r\_\-itr}
+\end{DoxyParamCaption}
+)}}
+\label{bin__packing_8cpp_ad78939de31d26895a7f3816246ef9f04}
+
+
+\subsection{Variable Documentation}
+\hypertarget{bin__packing_8cpp_a996c583417c1ec6c2bf4396af0eaa0c5}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!lpacked\_\-flag@{lpacked\_\-flag}}
+\index{lpacked\_\-flag@{lpacked\_\-flag}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{lpacked\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf lpacked\_\-flag}}}
+\label{bin__packing_8cpp_a996c583417c1ec6c2bf4396af0eaa0c5}
+\hypertarget{bin__packing_8cpp_ad669c198cf8b952ad5877c1addfb7c78}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!nr\_\-r@{nr\_\-r}}
+\index{nr\_\-r@{nr\_\-r}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{nr\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf nr\_\-r}}}
+\label{bin__packing_8cpp_ad669c198cf8b952ad5877c1addfb7c78}
+
+
+nr of routers used in current configuration 
+
+\hypertarget{bin__packing_8cpp_a86c9f04bfa1c110f70a46348b7f9e557}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!objective@{objective}}
+\index{objective@{objective}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{objective}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf objective}}}
+\label{bin__packing_8cpp_a86c9f04bfa1c110f70a46348b7f9e557}
+\hypertarget{bin__packing_8cpp_a6793a4125be91b59e503672eaae9acd5}{
+\index{bin\_\-packing.cpp@{bin\_\-packing.cpp}!packed\_\-flag@{packed\_\-flag}}
+\index{packed\_\-flag@{packed\_\-flag}!bin_packing.cpp@{bin\_\-packing.cpp}}
+\subsubsection[{packed\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf packed\_\-flag}}}
+\label{bin__packing_8cpp_a6793a4125be91b59e503672eaae9acd5}

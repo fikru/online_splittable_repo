@@ -1,0 +1,2 @@
+- Link power considered in ordering the routers
+- documentation included

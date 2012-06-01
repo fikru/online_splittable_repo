@@ -1,0 +1,4 @@
+\form#0:\[ \eta_{_l} = \frac{C_{rl}}{P_{rl}} \]
+\form#1:\begin{eqnarray} \eta_{_{NIC-}} = \frac{C_{r}}{P_{r}} \end{eqnarray}
+\form#2:\begin{eqnarray} \eta_{_{NIC+}} = \frac{C_{r}}{P_{r} + \sum_{i=1}^N{P_{rl}}} \end{eqnarray}
+\form#3:\begin{eqnarray} \eta_{_l} = \frac{C_{rl}}{P_{rl}} \end{eqnarray}
