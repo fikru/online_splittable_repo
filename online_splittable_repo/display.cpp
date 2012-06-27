@@ -60,9 +60,19 @@ void config_file(list<router> rList){
 		cout << r_itr->getCapacity() << " ";
 	cout << "]" << endl;
 
+	cout << "RC_actual = [ ";
+		for(list<router>::iterator r_itr = rList.begin(); r_itr != rList.end(); ++ r_itr)
+			cout << r_itr->getActualCapacity() << " ";
+		cout << "]" << endl;
+
 	cout << "RP = [ ";
 	for(list<router>::iterator r_itr = rList.begin(); r_itr != rList.end(); ++ r_itr)
 		cout << r_itr->getPower() << " ";
+	cout << "]" << endl;
+
+	cout << "RP_total = [ ";
+	for(list<router>::iterator r_itr = rList.begin(); r_itr != rList.end(); ++ r_itr)
+		cout << r_itr->getTotalPower() << " ";
 	cout << "]" << endl;
 
 	cout << "LC = [ ";

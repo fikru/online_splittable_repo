@@ -11,13 +11,13 @@
 using namespace std;
 
 /**@file global.h*/
-
-#define _DEBUG						///<to display some results to see if the algorithm is working properly or not
+//#define _DEBUG						///<to display some results to see if the algorithm is working properly or not
 //#define _CONF							///<to display the configuration file
-//#define _REVERSE_SORT						///<sorting routers(only sorted based on router power) and links in opposite order to the optimal
-//#define _SHUFFLE						///<if sorting routers and links not required randomly shuffle the router list
-//#define _ROUTER_POWER_SORT							///<if sorting routers and links required
-#define _LINK_ROUTER_POWER_SORT	            ///<consider both link and router power consumption in ordering the routers
+
+#define _RLSORT							///if sorting routers and links required
+#define _EFFICIENCY						///sort router by efficiency (C/P)
+#define _LINK_ROUTER_POWER_SUM	        ///<consider both link and router power consumption in ordering the routers (NIC+)
+
 #define _FIRST_FIT						///<first fit algorithm
 //#define _BEST_FIT						///<best fit algorithm
 

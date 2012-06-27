@@ -39,7 +39,7 @@ void rsort(list<router> &rList) {
 	 If the efficiency of two routers are the same, use their power consumption
 	 for comparison --*/
 	rList.sort(rcompare);
-	#ifndef _REVERSE_SORT
+	#ifdef _EFFICIENCY
 		rList.reverse();
 	#endif
 	for (list<router>::iterator r_itr = rList.begin(); r_itr != rList.end(); ++r_itr) {
@@ -56,26 +56,37 @@ void rsort(list<router> &rList) {
  */
 bool rcompare(router& lr, router& rr) {
 	double eff_lr, eff_rr; //efficiency of left and right router
-	#ifdef _LINK_ROUTER_POWER_SORT				//if link power is added to the router power for sorting purpose
-		eff_lr = lr.getActualCapacity() / (lr.getTotalPower());
-		eff_rr = rr.getActualCapacity() / (rr.getTotalPower());
-		//cout << eff_lr << " " << eff_rr << endl;
-		/*-- if the efficiency of two routers are the same,
-		 * then use their power consumption for comparison --*/
-		if (eff_lr == eff_rr) {
+	#ifdef _EFFICIENCY
+		#ifdef _LINK_ROUTER_POWER_SUM				//if link power is added to the router power for sorting purpose
+			eff_lr = lr.getActualCapacity() / (lr.getTotalPower());
+			eff_rr = rr.getActualCapacity() / (rr.getTotalPower());
+			//cout << eff_lr << " " << eff_rr << endl;
+			/*-- if the efficiency of two routers are the same,
+			 * then use their power consumption for comparison --*/
+			if (eff_lr == eff_rr) {
+				eff_lr = lr.getTotalPower();
+				eff_rr = rr.getTotalPower();
+			}
+		#else
+			eff_lr = lr.getActualCapacity()/(lr.getPower());
+			eff_rr = rr.getActualCapacity()/(rr.getPower());
+			//cout << eff_lr << " " << eff_rr << endl;
+			/*-- if the efficiency of two routers are the same,
+			 * then use their power consumption for comparison --*/
+			if (eff_lr == eff_rr) {
+				eff_lr = lr.getPower();
+				eff_rr = rr.getPower();
+			}
+		#endif
+	#else
+		#ifdef _LINK_ROUTER_POWER_SUM				//if link power is added to the router power for sorting purpose
 			eff_lr = lr.getTotalPower();
 			eff_rr = rr.getTotalPower();
-		}
-	#else
-		eff_lr = lr.getActualCapacity()/(lr.getPower());
-		eff_rr = rr.getActualCapacity()/(rr.getPower());
-		//cout << eff_lr << " " << eff_rr << endl;
-		/*-- if the efficiency of two routers are the same,
-		 * then use their power consumption for comparison --*/
-		if (eff_lr == eff_rr) {
+		#else
 			eff_lr = lr.getPower();
 			eff_rr = rr.getPower();
-		}
+		#endif
+
 	#endif
 	return eff_lr < eff_rr;
 }
@@ -93,7 +104,7 @@ bool rcompare(router& lr, router& rr) {
  */
 list<rLink> lsort(list<rLink> lList) {
 	lList.sort(lcompare);
-	#ifndef _REVERSE_SORT
+	#ifdef _EFFICIENCY
 		lList.reverse();
 	#endif
 	return lList;
@@ -107,14 +118,19 @@ list<rLink> lsort(list<rLink> lList) {
  */
 bool lcompare(rLink& ll, rLink& rl) {
 	double eff_ll, eff_rl;
-	eff_ll = ll.getCapacity() / (ll.getPower());
-	eff_rl = rl.getCapacity() / (rl.getPower());
-	/*-- if the efficiency of two routers are the same,
-	 * then use their power consumption for comparison --*/
-	if (eff_ll == eff_rl) {
+	#ifdef _EFFICIENCY
+		eff_ll = ll.getCapacity() / (ll.getPower());
+		eff_rl = rl.getCapacity() / (rl.getPower());
+		/*-- if the efficiency of two routers are the same,
+		 * then use their power consumption for comparison --*/
+		if (eff_ll == eff_rl) {
+			eff_ll = ll.getPower();
+			eff_rl = rl.getPower();
+		}
+	#else
 		eff_ll = ll.getPower();
 		eff_rl = rl.getPower();
-	}
+	#endif
 	return eff_ll < eff_rl;
 }
 

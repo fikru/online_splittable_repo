@@ -158,7 +158,7 @@ void usage(const char* program_name, int exit_code) {
 	cout << "\n Usage: " << program_name << " options" << " [configuration_file]"
 		 << "\n\n"
 	     << "options:\n"
-	     << "-f --file \t CPLEX_OPL format input configuration file\n"
+	     << "-d --data \t CPLEX_OPL format input configuration file\n"
 	     << "-h --help \t Display this message and exit\n"
 	     << "-v --verbose \t Print verbose message\n";
 	exit(exit_code);
@@ -230,7 +230,7 @@ int main(int argc, char** argv){
 	//command line long option specifier
 	const struct option long_option[] ={
 			{"help", 0, NULL, 'h'},
-			{"file", 1, NULL, 'f'},
+			{"data", 1, NULL, 'd'},
 			{"verbose", 0, NULL, 'v'},
 			{NULL, 0, NULL, 0} 			//required at end of array
 	};
@@ -242,7 +242,8 @@ int main(int argc, char** argv){
 		case 'h': 	//-h or --help
 			/*User requested usage information. Print it to standard output and exit with exit code 0 (normal termination)*/
 			usage(program_name, 0);
-		case 'f': 	//-d or --data
+			break;
+		case 'd': 	//-d or --data
 			/*this option takes an argument, the name of the input configuration file*/
 			data = argv[2];
 			break;
@@ -252,10 +253,12 @@ int main(int argc, char** argv){
 		case '?':	//the user specified an invalid option
 			/*print usage information to standard output, and exit with exit code 1(abnormal termination)*/
 			usage(program_name, 1);
+			break;
 		case -1:	//Done with the options
 			break;
 		default:	//something else: unexpected
 			abort();
+			break;
 		}
 	}while(next_option != -1);	//done with options. OPTIND points to first nonoption argument
 
@@ -313,9 +316,9 @@ int main(int argc, char** argv){
 			mssr_stat.setLoadList(0);
 
 			/*if sort required, sort the routers and the links thereof as per their efficiency = capacity/power*/
-			rsort(rList);
-
-			#ifdef _SHUFFLE
+			#ifdef _RLSORT
+				rsort(rList);
+			#else _SHUFFLE
 				vector<router> v;
 				list<router> rl;
 				v.resize (rList.size());
@@ -448,7 +451,15 @@ int main(int argc, char** argv){
 						mode = ios::trunc;
 					else		//else append data to file
 						mode = ios::app;
-					out_file.open("plotdata.txt", mode);
+					#ifndef _RLSORT
+						out_file.open("plotdata_unsorted.txt", mode);
+					#else
+						#ifdef _EFFICIENCY
+							out_file.open("plotdata_efficiency.txt", mode);
+						#else
+							out_file.open("plotdata_power.txt", mode);
+						#endif
+					#endif
 					if( !out_file ) { // file couldn't be opened
 						cerr << "Error: file could not be opened" << endl;
 						exit(1);
